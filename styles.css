@@ -1,3 +1,32 @@
-body {
-    background-color: aqua;
+header {
+    background: darkkhaki;
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+.form {
+    background: gold;
+}
+.image {
+    background: hotpink;
+}
+.gallery {
+    background: lightsalmon;
+}
+.meme-inputs div {
+    margin: 5px 0px;
+}
+
+@media all and (min-width: 600px) {
+    .meme-maker {flex: 1 0 0;}
+    #imageurl, #text1, #text2 {
+        width: 500px;
+    }
 }
