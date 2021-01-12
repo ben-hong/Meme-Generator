@@ -6,6 +6,7 @@
     <title>Memez</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
     <header>
@@ -15,19 +16,19 @@
             Ben's Meme Generator</h1></header>
     <div class="wrapper">
         <article class="meme-maker form">Meme Form
-            <form action="">
+            <form action="index.html" oninput="memeMaker()" onsubmit="memeSubmitter()">         
                 <div class="meme-inputs">
                     <div>
                         <label for="imageurl"></label>
-                        <input type="text" id="imageurl" name="imageurl" placeholder="Image URL Here">
+                        <input type="text" id="imageurl" name="imageurl" placeholder="Image URL Here" required>
                     </div>
                     <div>
-                        <label for="text1"></label>
-                        <input type="text" id="text1" name="text1" placeholder="Top Text Here">
+                        <label for="toptext"></label>
+                        <input type="text" id="toptext" name="toptext" placeholder="Top Text Here">
                     </div>
                     <div>
-                        <label for="text2"></label>
-                        <input type="text" id="text2" name="text2" placeholder="Bottom Text Here" 
+                        <label for="bottomtext"></label>
+                        <input type="text" id="bottomtext" name="bottomtext" placeholder="Bottom Text Here" 
                     </div>
                     <div>
                         <input type="submit" value="Generate Meme!">
@@ -35,19 +36,27 @@
                 </div>
             </form>
         </article>
-        <article class="meme-maker image">
-            Meme Image
-            <div>
-                <img src="images/meme-example.jpg" alt="">
-            </div>
+        <article id="meme-visual" class="image">
+            <img alt="invalid image URL!!!" id="meme-image" src="images/meme-example.jpg">   
+            <h2 class="top-text"></h2>        
+            <h2 class="bot-text"></h2>     
         </article>
         <article class="gallery">
-            <img src="images/meme-example.jpg" alt="">
-            <img src="images/meme-example.jpg" alt="">
-            <img src="images/height-meme-test.jpg" alt="">
-            <img src="images/meme-example.jpg" alt="">
-            <img src="images/height-meme-test.jpg" alt="">
-            <img src="images/height-meme-test.jpg" alt="">
+            <div class="image">
+                <img alt="invalid image URL!!!" id="meme-image" src="images/meme-example.jpg">   
+                <h2 class="top-text">I AM NOT IMPRESSED</h2>        
+                <h2 class="bot-text">WITH YOUR MEME</h2>     
+            </div>
+            <div class="image">
+                <img alt="invalid image URL!!!" id="meme-image" src="images/meme-example.jpg">   
+                <h2 class="top-text">I AM NOT IMPRESSED</h2>        
+                <h2 class="bot-text">WITH YOUR MEME</h2>     
+            </div>
+            <div class="image">
+                <img alt="invalid image URL!!!" id="meme-image" src="images/meme-example.jpg">   
+                <h2 class="top-text">I AM NOT IMPRESSED</h2>        
+                <h2 class="bot-text">WITH YOUR MEME</h2>     
+            </div>
         </article>
     </div>
 </body>
