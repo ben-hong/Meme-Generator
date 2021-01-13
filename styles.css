@@ -26,13 +26,13 @@ header {
     background: hotpink;
     
 }
-.gallery {
+#gallery {
     background: lightsalmon;
 }
 .form div {
     margin: 5px 0px;
 }
- #meme-image {
+ .meme-image {
     width: 100%;
     max-width: 600px;
 }
