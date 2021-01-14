@@ -2,9 +2,15 @@ window.addEventListener('load', function () {
 
     let submitter = document.getElementById("submitter");
     submitter.addEventListener('click', function() {
+    let imageURL = document.getElementById("imageurl").value;
+
+        if (!checkURL(imageURL)) {
+            return false;
+        } 
         let gallery = document.getElementById("gallery");
         let div = document.createElement("div");
         div.className = "image";
+        div.setAttribute("id", "gal-img");
         let img = document.createElement("img");
         let imgSource = document.getElementsByClassName("meme-image")[0].src;
         img.src = imgSource;
@@ -29,16 +35,32 @@ window.addEventListener('load', function () {
   })
   function memeMaker() {
     let imageURL = document.getElementById("imageurl").value;
-    let alt = imageURL === document.getElementsByClassName("meme-image")[0].alt;
-    if (imageURL === '' || imageURL === alt) {
-        return false;   
-    } 
     let topTextVal = document.getElementById("toptext").value;
     let botTextVal = document.getElementById("bottomtext").value;
-    document.getElementsByClassName("meme-image")[0].src = imageURL;
     let topTextMeme = document.getElementById("meme-visual").getElementsByClassName("top-text")[0];
     let botTextMeme = document.getElementById("meme-visual").getElementsByClassName("bot-text")[0];
+    if (!checkURL(imageURL)) {
+        return false;
+    } 
+    document.getElementsByClassName("meme-image")[0].src = imageURL; 
     topTextMeme.innerHTML = topTextVal;
     botTextMeme.innerHTML = botTextVal;
 }
+function checkURL(url) {
+    let extensions = ['jpeg', 'jpg', 'png', 'gif', 'image'];
+    for (let name of extensions) {
+        if (url.includes(name)) {
+            return true;
+        }
+    }
+    return false;
+}
+window.addEventListener('click', function(event) {
+    if (event.target.parentElement.id === 'gal-img') {
+        event.target.parentElement.remove();
+    }
+});
+
+let sum = 0;
+
 

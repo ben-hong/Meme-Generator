@@ -1,5 +1,9 @@
+body {
+    background: gray;
+}
 header {
     background: darkkhaki;
+    border: 2px solid black;
     text-align: center;
 }
 .wrapper {
@@ -12,8 +16,10 @@ header {
 }
 .form {
     background: gold;
+    border: 2px solid black;
 }
 .image {
+    margin: 5px;
     display: inline-block;
     position: relative;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -23,16 +29,20 @@ header {
     font-size: 1.9em;
     width: 100%;
     max-width: 600px;
-    background: hotpink;
     
 }
 #gallery {
     background: lightsalmon;
+    border: 3px solid black;
+}
+.gallery-title {
+    text-align: center;
 }
 .form div {
     margin: 5px 0px;
 }
  .meme-image {
+     border-radius: 5%;
     width: 100%;
     max-width: 600px;
 }
