@@ -28,9 +28,29 @@ header {
     line-height: 1.1;
     font-size: 1.9em;
     width: 100%;
-    max-width: 600px;
-    
+    max-width: 600px;  
 }
+#gal-img:hover {
+    background: url('images/crossmark.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 35%;
+}
+#gal-img:hover > .bot-text, #gal-img:hover > .top-text {
+    opacity: .5;
+    z-index: -1;
+ }
+.meme-image {
+   border-radius: 5%;
+   width: 100%;
+   max-width: 600px;
+   
+}
+#gal-img > .meme-image:hover {
+    opacity: .5;
+   filter: alpha(opacity=40);
+}
+
 #gallery {
     background: lightsalmon;
     border: 3px solid black;
@@ -41,11 +61,7 @@ header {
 .form div {
     margin: 5px 0px;
 }
- .meme-image {
-     border-radius: 5%;
-    width: 100%;
-    max-width: 600px;
-}
+ 
 .top-text {
     position: absolute;
     color: white;

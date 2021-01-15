@@ -61,6 +61,5 @@ window.addEventListener('click', function(event) {
     }
 });
 
-let sum = 0;
 
 
