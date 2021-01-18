@@ -26,7 +26,7 @@ header {
     -webkit-text-stroke: 2px black;
     text-align: center;
     line-height: 1.1;
-    font-size: 1.9em;
+    font-size: 1em;
     width: 100%;
     max-width: 600px;  
 }
@@ -85,5 +85,8 @@ header {
     .meme-maker{flex: 1 0 0;}
     #imageurl {
         width: 500px;
+    }
+    .image {
+        font-size: 2em;
     }
 }
